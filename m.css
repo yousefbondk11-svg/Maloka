@@ -1,0 +1,51 @@
+body, html { 
+    margin: 0; padding: 0; height: 100%; 
+    font-family: 'Arial', sans-serif; color: white; 
+    overflow-x: hidden;
+    background: url('https://i.ibb.co/T9Y9ytm/image.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#lock-screen {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    display: flex; flex-direction: column; justify-content: center;
+    align-items: center; z-index: 1000; text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    transition: 1s;
+}
+
+#start-btn, .unlock-btn, #surprise-btn {
+    padding: 12px 35px; border-radius: 25px; border: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.1); color: white; cursor: pointer;
+    font-weight: bold; margin-top: 20px; transition: 0.3s;
+}
+
+.profile-img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #ff80ab; margin-bottom: 20px; object-fit: cover; }
+
+#login-area input { padding: 12px; border-radius: 20px; border: none; text-align: center; width: 220px; margin-top: 10px; outline: none; }
+
+#main-content { display: none; text-align: center; min-height: 100vh; }
+
+.overlay { background: rgba(0, 0, 0, 0.5); min-height: 100vh; padding: 40px 10px; }
+
+.photo-display { 
+    width: 300px; height: 400px; margin: 25px auto; 
+    border: 8px solid #fff; border-radius: 15px; 
+    overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+    position: relative;
+}
+.photo-display img { width: 100%; height: 100%; object-fit: cover; position: absolute; left: 0; top: 0; opacity: 0; transition: 1.5s; }
+.photo-display img.active { opacity: 1; position: relative; }
+
+.timer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; max-width: 360px; margin: 20px auto; }
+.time-box { background: rgba(255, 255, 255, 0.1); padding: 15px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.2); }
+.time-box span { display: block; font-size: 2rem; color: #ffeb3b; font-weight: bold; }
+
+.video-section video { width: 90%; max-width: 320px; border-radius: 15px; border: 3px solid #fff; margin-top: 20px; }
+
+#hearts-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 5; }
+.heart { position: absolute; color: #ff4d6d; animation: fall linear forwards; font-size: 20px; }
+@keyframes fall { to { transform: translateY(100vh) rotate(360deg); } }
+
+#final-message { margin-top: 20px; padding: 20px; background: rgba(0,0,0,0.6); border-radius: 15px; border: 1px dashed #ff80ab; font-size: 1.2rem; }

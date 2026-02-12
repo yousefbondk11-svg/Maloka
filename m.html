@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حكايتنا ❤️</title>
+    <link rel="stylesheet" href="m.css">
+</head>
+<body>
+
+    <div id="lock-screen">
+        <div id="pre-lock-msg">
+            <h1 class="fade-in-text">يا أجمل صدفة في عمري.. ❤️</h1>
+            <button onclick="showLogin()" id="start-btn">إيه هي؟ 😍</button>
+        </div>
+
+        <div id="login-area" style="display: none;">
+            <img src="https://i.ibb.co/hJxg8HzR/image.png" class="profile-img">
+            <h2>أدخلي تاريخنا المميز</h2>
+            <input type="text" id="passInput" placeholder="تاريخ ميلاد القمر">
+            <br>
+            <button onclick="unlock()" class="unlock-btn">فتح الحكاية ✨</button>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div id="hearts-container"></div>
+        <div class="overlay">
+            <h1 class="main-title">حكايتنا بدأت وما انتهتش ✨</h1>
+            
+            <div class="photo-display">
+                <img src="https://i.ibb.co/W9yZ9zh/image.png" class="active" id="slide">
+            </div>
+
+            <div class="timer-grid">
+                <div class="time-box"><span id="days">0</span><p>يوم</p></div>
+                <div class="time-box"><span id="hours">0</span><p>ساعة</p></div>
+                <div class="time-box"><span id="mins">0</span><p>دقيقة</p></div>
+                <div class="time-box"><span id="secs">0</span><p>ثانية</p></div>
+            </div>
+
+            <div class="video-section">
+                <h3>ذكرى لينا 🎥</h3>
+                <video id="myVideo" controls playsinline>
+                    <source src="lovevid.MOV" type="video/quicktime">
+                    <source src="lovevid.MOV" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="final-section">
+                <button onclick="showFinalSurprise()" id="surprise-btn">في حاجة مهمة عايز أقولهالك.. ❤️</button>
+                <div id="final-message" style="display: none;">
+                    <p>"أنتِ الدنيا وما فيها، ومستعد أعمل أي حاجة عشان تفضلي جانبي.. بحبك لآخر العمر!"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="loveSong" loop>
+        <source src="lovesong.m4a" type="audio/mp4">
+    </audio>
+
+    <script src="m.js"></script>
+</body>
+</html>
